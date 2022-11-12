@@ -16,9 +16,25 @@ const buttonExercise2 = document.querySelector("#button-exercise2");
 const pExercise2 = document.querySelector("#p-exercise2");
 
 buttonExercise2.addEventListener("click", () => {
-  const number1 = +inputExercise2_1.value;
-  const number2 = +inputExercise2_2.value;
-  const number3 = +inputExercise2_3.value;
+  let number1 = +inputExercise2_1.value;
+  let number2 = +inputExercise2_2.value;
+  let number3 = +inputExercise2_3.value;
+
+  if (number1 < 0) {
+    number1 = 0;
+    inputExercise2_1.value = 0;
+  }
+
+  if (number2 < 0) {
+    number2 = 0;
+    inputExercise2_2.value = 0;
+  }
+
+  if (number3 < 0) {
+    number3 = 0;
+    inputExercise2_3.value = 0;
+  }
+
   const totalnumber = number1 + number2 + number3;
 
   if (totalnumber >= 11) {
